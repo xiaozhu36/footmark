@@ -75,6 +75,12 @@ class LoadBalancer(TaggedSLBObject):
         '''
         return self.connection.delete_load_balancer(self.load_balancer_id)
 
+    def add_backend_servers(self, backend_servers):
+        '''
+        add several backend servers to a load balancer
+        '''
+        return self.connection.delete_load_balancer(self.load_balancer_id)
+
     def read(self):
         balancer = {}
         for name, value in self.__dict__.items():
